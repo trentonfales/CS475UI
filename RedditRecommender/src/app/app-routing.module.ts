@@ -25,10 +25,6 @@ import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomepageComponent
-  },
-  {
     path: 'art',
     component: ArtComponent
   },
@@ -107,6 +103,10 @@ const routes: Routes = [
   {
     path: 'tv',
     component: TVComponent
+  },
+  {
+    path: '',
+    component: HomepageComponent
   }
 ];
 
