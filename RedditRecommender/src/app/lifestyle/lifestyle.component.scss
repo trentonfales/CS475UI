@@ -1,0 +1,26 @@
+body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    background-color: #f2f4f3;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+div.container {
+    padding-left: 250px;
+    margin-top: -25px;
+}
+
+img {
+    width: 422.5px;
+    height: 400px;
+    object-fit: scale-down;
+}
+
+h1.header {
+    padding-top: 25px;
+}
