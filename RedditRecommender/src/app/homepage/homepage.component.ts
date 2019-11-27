@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-homepage',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
+  inputSection = this.fb.group({
+    subreddit: ['']
+  });
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+  }
+
+  submit() {
+    console.log(this.inputSection.value);
   }
 
 }
