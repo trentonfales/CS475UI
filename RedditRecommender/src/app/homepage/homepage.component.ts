@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ConditionalExpr } from '@angular/compiler';
 
 @Component({
   selector: 'app-homepage',
@@ -18,6 +19,10 @@ export class HomepageComponent implements OnInit {
 
   submit() {
     console.log(this.inputSection.value);
+  }
+
+  validateInput(): boolean {
+    return this.inputSection.value.subreddit === 'film';
   }
 
 }

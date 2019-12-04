@@ -8,8 +8,21 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea3">Top 5 Recommendations</label>
-                <textarea readonly class="form-control" id="exampleFormControlTextarea3"
-                    rows="7">{{inputSection.value | json}}</textarea>
+                <div *ngIf="validateInput()">
+                    <textarea readonly class="form-control" id="exampleFormControlTextarea3"
+                            rows="7">
+1. r/MovieDetails - 0.5038
+2. r/NetflixBestOf - 0.4916
+3. r/ShittyMovieDetails - 0.4693
+4. r/comicbooks - 0.4543
+5. r/Filmmakers - 0.4355
+                    </textarea>
+                </div>
+                <div *ngIf="!validateInput()">
+                        <textarea readonly class="form-control" id="exampleFormControlTextarea3"
+                        rows="7"></textarea>
+                </div>
+                <button type="button" class="btn btn-outline-success" onclick="submit()">Submit</button>
             </div>
         </form>
     </div>
